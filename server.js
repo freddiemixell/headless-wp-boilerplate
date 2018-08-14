@@ -42,6 +42,6 @@ app.prepare()
 
     server.listen(port, (err) => {
       if (err) throw err
-      console.log(`> Headless WP Boilerplate: LIVE! & Spicy on http://localhost:${port}`)
+      console.log(`> View the dankness on http://localhost:${port}`)
     })
   })
