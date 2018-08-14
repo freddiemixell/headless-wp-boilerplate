@@ -7,7 +7,6 @@ import { style } from "./style-util";
 const AnchorMan = styled.a`
     color: ${style.color.primary};
     text-decoration: none;
-    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
     font-weight: 700;
     text-align: center;
     text-transform: uppercase;

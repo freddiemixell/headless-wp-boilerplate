@@ -4,6 +4,10 @@ import styled from "styled-components";
 
 import { style } from "./style-util";
 
+const AnchorMan = styled.a`
+    margin: 0 10px;
+`;
+
 const MenuWrapper = styled.div`
     display: none;
     @media ${style.device.tablet} {
@@ -26,7 +30,7 @@ class Menu extends Component {
         if (item.object === "custom") {
             return (
                 <Link key={index} prefetch href={item.url} key={item.ID} replace>
-                    <a>{item.title}</a>
+                    <AnchorMan>{item.title}</AnchorMan>
                 </Link>
             );
         }
@@ -40,7 +44,7 @@ class Menu extends Component {
                 key={item.ID}
                 replace
             >
-                <a>{item.title}</a>
+                <AnchorMan>{item.title}</AnchorMan>
             </Link>
         );
     });
@@ -60,7 +64,7 @@ class Menu extends Component {
         {menuItems}
         <Link prefetch
             href="/blog" replace>
-            <a>Blog</a>
+            <AnchorMan>Blog</AnchorMan>
         </Link>
       </div>
       </MenuWrapper>
