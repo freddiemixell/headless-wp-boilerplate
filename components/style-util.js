@@ -8,6 +8,12 @@ const size = {
     desktop: '2560px'
   }
 
+  const color = {
+    primary: '#8CC974',
+    secondary: '#22A6DD',
+    primaryDark: '#135B79'
+  }
+
   export const style = {
     device: {
     mobileS: `(min-width: ${size.mobileS})`,
@@ -20,18 +26,20 @@ const size = {
     desktopL: `(min-width: ${size.desktop})`
     },
     color: {
-      primary: '#000'
+      primary: '#8CC974',
+      secondary: '#22A6DD',
+      primaryDark: '#135B79'
     },
     burgerStyles: {
       bmBurgerButton: {
         position: 'absolute',
         width: '36px',
         height: '30px',
-        left: '36px',
+        right: '36px',
         top: '36px'
       },
       bmBurgerBars: {
-        background: '#C4222F'
+        background: '#8CC974'
       },
       bmCrossButton: {
         height: '24px',
@@ -39,29 +47,29 @@ const size = {
         right: '34px'
       },
       bmCross: {
-        background: '#243B72',
+        background: '#8CC974',
         height: '34px'
       },
       bmMenu: {
-        background: '#fff',
+        background: '#135B79',
         padding: '2.5em 1.5em 0',
         fontSize: '1.15em',
         width: '100%',
         overflow: 'visible'
       },
       bmMorphShape: {
-        fill: '#fff'
-      },
-      bmItemList: {
-        color: '#b8b7ad',
-        padding: '0.8em'
+        fill: '#135B79'
       },
       bmItem: {
+        display: 'flex',
+        flexDirection: 'column',
+      },
+      bmItemList: {
         display: 'flex',
         flexDirection: 'column'
       },
       bmOverlay: {
-        background: 'rgba(0, 0, 0, 0.3)'
+        background: '#fff'
       }
     }
   };

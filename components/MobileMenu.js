@@ -4,6 +4,18 @@ import styled from "styled-components";
 import { bubble as BurgerMenu } from 'react-burger-menu';
 import { style } from "./style-util";
 
+const AnchorMan = styled.a`
+    color: ${style.color.primary};
+    text-decoration: none;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 5%;
+    cursor: pointer;
+`;
+
+
 const MenuWrapper = styled.div`
     display:flex;
     @media ${style.device.tablet} {
@@ -23,7 +35,7 @@ class MobileMenu extends Component {
         if (item.object === "custom") {
             return (
                 <Link prefetch href={item.url} key={item.ID} remove>
-                    <a style={linkStyle}>{item.title}</a>
+                    <AnchorMan>{item.title}</AnchorMan>
                 </Link>
             );
         }
@@ -33,10 +45,10 @@ class MobileMenu extends Component {
             <Link prefetch
                 as={`/${slug}`}
                 href={`/${actualPage}?slug=${slug}&apiRoute=${item.object}`}
-                key={item.ID} 
+                key={item.ID}
                 remove
             >
-                <a>{item.title}</a>
+                <AnchorMan>{item.title}</AnchorMan>
             </Link>
         );
     });
@@ -44,25 +56,25 @@ class MobileMenu extends Component {
 
     return(
       <MenuWrapper>
-        <BurgerMenu isOpen={false} styles={ style.burgerStyles }>
         <Link prefetch href="/" remove>
             <a><img
                 src="/static/images/logo.png"
-                width="100"
+                width="300"
+            /></a>
+        </Link>
+        <BurgerMenu isOpen={false} styles={ style.burgerStyles } right>
+        <Link prefetch href="/" remove>
+            <a><img
+                src="/static/images/logo.png"
+                style={{width: '100%', borderRadius: '2%', paddingBottom: '10%'}}
             /></a>
         </Link>
         {menuItems}
         <Link prefetch
             href="/blog" remove>
-            <a>Blog</a>
+            <AnchorMan>Blog</AnchorMan>
         </Link>
         </BurgerMenu>
-        <Link prefetch href="/" remove>
-            <a><img
-                src="/static/images/logo.png"
-                width="150"
-            /></a>
-        </Link>
         </MenuWrapper>
     )
   }
