@@ -2,49 +2,14 @@ import React, { Component } from "react";
 import Link from "next/link";
 import styled from "styled-components";
 import { bubble as BurgerMenu } from 'react-burger-menu';
+import { style } from "./style-util";
 
-var styles = {
-    bmBurgerButton: {
-      position: 'absolute',
-      width: '36px',
-      height: '30px',
-      left: '36px',
-      top: '36px'
-    },
-    bmBurgerBars: {
-      background: '#C4222F'
-    },
-    bmCrossButton: {
-      height: '24px',
-      width: '24px',
-      right: '34px'
-    },
-    bmCross: {
-      background: '#243B72',
-      height: '34px'
-    },
-    bmMenu: {
-      background: '#fff',
-      padding: '2.5em 1.5em 0',
-      fontSize: '1.15em',
-      width: '100%',
-      overflow: 'visible'
-    },
-    bmMorphShape: {
-      fill: '#fff'
-    },
-    bmItemList: {
-      color: '#b8b7ad',
-      padding: '0.8em'
-    },
-    bmItem: {
-      display: 'flex',
-      flexDirection: 'column'
-    },
-    bmOverlay: {
-      background: 'rgba(0, 0, 0, 0.3)'
+const MenuWrapper = styled.div`
+    display:flex;
+    @media ${style.device.tablet} {
+        display: none;
     }
-  }
+`;
 
 class MobileMenu extends Component {
 
@@ -78,8 +43,8 @@ class MobileMenu extends Component {
 
 
     return(
-      <div>
-        <BurgerMenu isOpen={false} styles={ styles }>
+      <MenuWrapper>
+        <BurgerMenu isOpen={false} styles={ style.burgerStyles }>
         <Link prefetch href="/" remove>
             <a><img
                 src="/static/images/logo.png"
@@ -98,7 +63,7 @@ class MobileMenu extends Component {
                 width="150"
             /></a>
         </Link>
-        </div>
+        </MenuWrapper>
     )
   }
 
