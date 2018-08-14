@@ -2,6 +2,14 @@ import React, { Component } from "react";
 import Link from "next/link";
 import styled from "styled-components";
 
+import { style } from "./style-util";
+
+const MenuWrapper = styled.div`
+    display: none;
+    @media ${style.device.tablet} {
+        display: flex;
+    }
+`;
 
 class Menu extends Component {
   constructor() {
@@ -39,6 +47,7 @@ class Menu extends Component {
 
 
     return(
+        <MenuWrapper>
       <div id="homeNav" className="mainNav flex absolute">
         <Link prefetch href="/" replace>
             <a><img 
@@ -54,6 +63,7 @@ class Menu extends Component {
             <a>Blog</a>
         </Link>
       </div>
+      </MenuWrapper>
     )
   }
 

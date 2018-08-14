@@ -4,6 +4,13 @@ import styled from "styled-components";
 import { bubble as BurgerMenu } from 'react-burger-menu';
 import { style } from "./style-util";
 
+const MenuWrapper = styled.div`
+    display:flex;
+    @media ${style.device.tablet} {
+        display: none;
+    }
+`;
+
 class MobileMenu extends Component {
 
   getSlug(url) {
@@ -36,7 +43,7 @@ class MobileMenu extends Component {
 
 
     return(
-      <div>
+      <MenuWrapper>
         <BurgerMenu isOpen={false} styles={ style.burgerStyles }>
         <Link prefetch href="/" remove>
             <a><img
@@ -56,7 +63,7 @@ class MobileMenu extends Component {
                 width="150"
             /></a>
         </Link>
-        </div>
+        </MenuWrapper>
     )
   }
 
