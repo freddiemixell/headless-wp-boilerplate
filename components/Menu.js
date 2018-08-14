@@ -18,7 +18,7 @@ class Menu extends Component {
         if (item.object === "custom") {
             return (
                 <Link key={index} prefetch href={item.url} key={item.ID} replace>
-                    <a style={linkStyle}>{item.title}</a>
+                    <a>{item.title}</a>
                 </Link>
             );
         }
@@ -32,7 +32,7 @@ class Menu extends Component {
                 key={item.ID}
                 replace
             >
-                <a style={linkStyle}>{item.title}</a>
+                <a>{item.title}</a>
             </Link>
         );
     });

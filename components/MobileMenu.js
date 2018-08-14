@@ -71,14 +71,14 @@ class MobileMenu extends Component {
                 key={item.ID} 
                 remove
             >
-                <a style={linkStyle}>{item.title}</a>
+                <a>{item.title}</a>
             </Link>
         );
     });
 
 
     return(
-      <Wrapper>
+      <div>
         <BurgerMenu isOpen={false} styles={ styles }>
         <Link prefetch href="/" remove>
             <a><img
@@ -89,23 +89,16 @@ class MobileMenu extends Component {
         {menuItems}
         <Link prefetch
             href="/blog" remove>
-            <a style={linkStyle}>Blog</a>
+            <a>Blog</a>
         </Link>
-        <Subscribe></Subscribe>
         </BurgerMenu>
         <Link prefetch href="/" remove>
             <a><img
                 src="/static/images/logo.png"
                 width="150"
-                style={logoStyle}
             /></a>
         </Link>
-        <a href="tel:2159461046">
-            <PhoneWrap>
-                <PhoneInTalk size="50" /> 
-            </PhoneWrap>
-        </a>
-      </Wrapper>
+        </div>
     )
   }
 
