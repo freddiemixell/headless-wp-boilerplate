@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Link from "next/link";
 import styled from "styled-components";
-import { bubble as BurgerMenu } from 'react-burger-menu';
+import { stack as BurgerMenu } from 'react-burger-menu';
 import { style } from "./style-util";
 
 const AnchorMan = styled.a`
