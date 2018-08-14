@@ -52,7 +52,7 @@ class Menu extends Component {
         <Link prefetch href="/" replace>
             <a><img 
                 src="/static/images/logo.png"
-                width="150px"
+                width="300px"
                 id="logo"
                 className="logo"
             /></a>
