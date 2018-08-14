@@ -1,11 +1,11 @@
 {
   "name": "headless-wp-boilerplate",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "scripts": {
     "dev": "node server.js",
     "build": "next build",
     "start": "NODE_ENV=production node server.js",
-    "deploy": "now --npm --public",
+    "deploy": "now --public",
     "alias": "now alias"
   },
   "now": {
