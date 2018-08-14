@@ -10,17 +10,31 @@ app.prepare()
   .then(() => {
     const server = express()
 
-    server.get('/a', (req, res) => {
-      return app.render(req, res, '/b', req.query)
-    })
+    server.get("/blog/:slug", (req, res) => {
+      const actualPage = "/blog";
+      const queryParams = { slug: req.params.slug, apiRoute: "post" };
+      app.render(req, res, actualPage, queryParams);
+  });
 
-    server.get('/b', (req, res) => {
-      return app.render(req, res, '/a', req.query)
-    })
+  
+  server.get("/:slug", (req, res) => {
+      const actualPage = "/page";
+      const queryParams = { slug: req.params.slug, apiRoute: "page" };
+      const actualPageBlog = "/blog";
+      const queryParamsBlog = { slug: req.params.slug, apiRoute: "post" };
+      if(req.params.slug === "blog") {
+        app.render(req, res, actualPageBlog, queryParamsBlog);
+      }
+      else {
+        app.render(req, res, actualPage, queryParams);
+      }
+  });
 
-    server.get('/posts/:id', (req, res) => {
-      return app.render(req, res, '/posts', { id: req.params.id })
-    })
+  server.get("/category/:slug", (req, res) => {
+      const actualPage = "/category";
+      const queryParams = { slug: req.params.slug };
+      app.render(req, res, actualPage, queryParams);
+  });
 
     server.get('*', (req, res) => {
       return handle(req, res)
@@ -28,6 +42,6 @@ app.prepare()
 
     server.listen(port, (err) => {
       if (err) throw err
-      console.log(`> Ready on http://localhost:${port}`)
+      console.log(`> Headless WP Boilerplate: LIVE! & Spicy on http://localhost:${port}`)
     })
   })
