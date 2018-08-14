@@ -15,6 +15,7 @@
     ]
   },
   "dependencies": {
+    "babel-plugin-emotion": "^9.2.6",
     "babel-plugin-styled-components": "^1.5.1",
     "express": "^4.14.0",
     "isomorphic-unfetch": "^2.1.1",
