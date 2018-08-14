@@ -12,7 +12,7 @@ class Header extends Component {
     render() {
 
         const {
-            title = 'Headless WP Starter',
+            title = 'Headless WP Boilerplate',
             description = 'Designed by Freddie Mixell'
         } = this.props
 
