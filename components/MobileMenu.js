@@ -1,54 +1,7 @@
 import React, { Component } from "react";
 import Link from "next/link";
-import { Config } from "../config.js";
 import styled from "styled-components";
-import { device } from "./device";
-import { colors } from "./colors";
 import { bubble as BurgerMenu } from 'react-burger-menu';
-import { PhoneInTalk } from 'styled-icons/material/PhoneInTalk.cjs';
-import Subscribe from "./Subscribe.js";
-
-const linkStyle = {
-    textDecoration: 'none',
-    display: 'flex',
-    flexDirection: 'column',
-    color: '#C4222F',
-    fontWeight: '500',
-    justifyContent: 'left',
-    fontSize: '20px',
-    borderBottom: '1px solid #333',
-    padding: '10px'
-};
-
-const logoStyle = { 
-    position: 'absolute',
-    zIndex: '1000',
-    display: 'flex',
-    marginLeft: 'auto',
-    marginRight: 'auto',
-    padding: '2% 0 0 0',
-    left: '0',
-    right: '0'
-};
-
-const PhoneWrap = styled.span`
-    position: absolute;
-    z-index: 1000;
-    right: 36px;
-    top: 30px;
-    font-size: 22px;
-    align-items: center;
-    ${colors.redColor};
-    padding: 0!important;
-    margin: 0!important;
-`;
-
-const Wrapper = styled.div`
-
-@media ${device.laptop} {
-    display: none;
-}
-`;
 
 var styles = {
     bmBurgerButton: {
