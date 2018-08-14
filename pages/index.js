@@ -1,15 +1,11 @@
-import Layout from "../components/Layout.js";
+import Layout from "../components/Layout";
 import React, { Component } from "react";
 import fetch from "isomorphic-unfetch";
 import Link from "next/link";
-import PageWrapper from "../components/PageWrapper.js";
-import Menu from "../components/Menu.js";
+import PageWrapper from "../components/PageWrapper";
+import Menu from "../components/Menu";
+import MobileMenu from "../components/MobileMenu";
 import { Config } from "../config.js";
-
-const headerImageStyle = {
-    marginTop: 50,
-    marginBottom: 50
-};
 
 class Index extends Component {
     static async getInitialProps(context) {
@@ -60,6 +56,7 @@ class Index extends Component {
         return (
             <Layout>
                 <Menu menu={this.props.headerMenu} />
+                <MobileMenu menu={this.props.headerMenu} />
                 <h1>{this.props.page.title.rendered}</h1>
                 <div
                     dangerouslySetInnerHTML={{
