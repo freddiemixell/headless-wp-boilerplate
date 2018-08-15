@@ -35,7 +35,7 @@ class Page extends Component {
         };
 
                 return (
-                    <Layout>
+                    <Layout sidebar={true}>
                         <Menu menu={this.props.headerMenu} />
                         <MobileMenu menu={this.props.headerMenu} />
                         <h1>Page</h1>
