@@ -69,7 +69,7 @@ const size = {
         flexDirection: 'column'
       },
       bmOverlay: {
-        background: '#fff'
+        background: 'bisque'
       }
     }
   };

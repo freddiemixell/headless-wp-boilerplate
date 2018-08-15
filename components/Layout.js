@@ -2,7 +2,11 @@ import Header from "./Header";
 import Footer from "./Footer";
 import styled from 'styled-components';
 
-const Container = styled.div``;
+const Container = styled.div`
+    display: flex;
+    flex-direction: column;
+    background: bisque;
+`;
 
 
 const Layout = props => (

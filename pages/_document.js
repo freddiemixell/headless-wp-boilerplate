@@ -27,7 +27,7 @@ export default class MyDocument extends Document {
           {/* Step 5: Output the styles in the head  */}
           {this.props.styleTags}
         </Head>
-        <body style={{fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"'}}>
+        <body style={{background: 'bisque', margin: '0', fontFamily: '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif'}}>
           <Main />
           <NextScript />
         </body>

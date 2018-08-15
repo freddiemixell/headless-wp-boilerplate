@@ -35,11 +35,11 @@ class Page extends Component {
         };
 
                 return (
-                    <div>
+                    <Layout>
                         <Menu menu={this.props.headerMenu} />
                         <MobileMenu menu={this.props.headerMenu} />
                         <h1>Page</h1>
-                    </div>
+                    </Layout>
                 );
             
     }
