@@ -1,20 +1,32 @@
 import MetaHead from "./MetaHead";
 import Footer from "./Footer";
+import Sidebar from "./Sidebar";
 import styled from 'styled-components';
 
-const Container = styled.div`
+const LayoutStyled = styled.div`
     display: flex;
     flex-direction: column;
     background: bisque;
+    margin: 10px;
+    padding: 10px;
 `;
 
 
 const Layout = props => (
-    <Container>
+    <LayoutStyled>
         <MetaHead />
-        {props.children}
+        <main>
+            <section>
+                {props.children}
+            </section>
+            {props.sidebar && <aside><Sidebar/></aside>}
+        </main>
         <Footer />
-    </Container>
+    </LayoutStyled>
 );
+
+Layout.defaultProps = {
+    sidebar: false
+}
 
 export default Layout;

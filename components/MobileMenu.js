@@ -58,7 +58,7 @@ class MobileMenu extends Component {
             <Link prefetch href="/" remove>
                 <a><img
                     src="/static/images/logo.png"
-                    width="300"
+                    width="280"
                 /></a>
             </Link>
             <BurgerMenu isOpen={false} styles={ style.burgerStyles } right>
