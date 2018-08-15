@@ -1,6 +1,18 @@
 import React, { Component } from 'react'
 import fetch from 'isomorphic-unfetch';
 import { Config } from '../config';
+import styled from 'styled-components';
+import { style } from "./style-util";
+
+const AnchorMan = styled.a`
+    color: ${style.color.primary};
+    text-decoration: none;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 5%;
+    cursor: pointer;
+`;
 
 export default class MainMenu extends Component {
     state = {
@@ -21,7 +33,7 @@ export default class MainMenu extends Component {
     return (
      <nav>
         {menuItems.map(item => {
-            return <a>{item.title}</a>
+            return <AnchorMan>{item.title}</AnchorMan>
         })}
      </nav>
     )

@@ -3,8 +3,6 @@ import React, { Component } from "react";
 import fetch from "isomorphic-unfetch";
 import Error from "next/error";
 import PageWrapper from "../components/PageWrapper";
-import Menu from "../components/Menu";
-import MobileMenu from "../components/MobileMenu";
 import { Config } from "../config.js";
 
 class Page extends Component {
@@ -36,8 +34,6 @@ class Page extends Component {
 
                 return (
                     <Layout sidebar={true}>
-                        <Menu menu={this.props.headerMenu} />
-                        <MobileMenu menu={this.props.headerMenu} />
                         <h1>Page</h1>
                     </Layout>
                 );

@@ -2,8 +2,6 @@ import Layout from "../components/Layout";
 import React, { Component } from "react";
 import fetch from "isomorphic-unfetch";
 import PageWrapper from "../components/PageWrapper";
-import Menu from "../components/Menu";
-import MobileMenu from "../components/MobileMenu";
 import { Config } from "../config.js";
 
 
