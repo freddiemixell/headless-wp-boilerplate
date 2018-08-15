@@ -3,8 +3,9 @@ import Link from "next/link";
 import NextHead from 'next/head'
 import Menu from "./Menu.js";
 import { Config } from "../config.js";
+import MainMenu from "./MainMenu";
 
-class MetaHead extends Component {
+class Header extends Component {
     constructor() {
         super();
     }
@@ -31,9 +32,19 @@ class MetaHead extends Component {
                     </title>
                     <meta name="description" content={description}/>
                 </NextHead>
+                <header>
+                    <Link prefetch href="/" remove>
+                        <a><img
+                            src="/static/images/logo.png"
+                            width="280"
+                            alt={title}
+                        /></a>
+                    </Link>
+                    <MainMenu/>
+                </header>
             </div>
         );
     }
 }
 
-export default MetaHead;
+export default Header;

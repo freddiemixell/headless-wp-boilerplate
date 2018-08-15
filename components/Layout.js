@@ -1,4 +1,4 @@
-import MetaHead from "./MetaHead";
+import Header from "./Header";
 import Footer from "./Footer";
 import Sidebar from "./Sidebar";
 import styled from 'styled-components';
@@ -11,11 +11,16 @@ const LayoutStyled = styled.div`
     padding: 10px;
 `;
 
+const mainLayout = {
+    display: 'grid',
+    gridTemplateColumns: '70% 30%'
+}
+
 
 const Layout = props => (
     <LayoutStyled>
-        <MetaHead />
-        <main>
+        <Header />
+        <main style={mainLayout}>
             <section>
                 {props.children}
             </section>
