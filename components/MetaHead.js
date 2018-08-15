@@ -4,7 +4,7 @@ import NextHead from 'next/head'
 import Menu from "./Menu.js";
 import { Config } from "../config.js";
 
-class Header extends Component {
+class MetaHead extends Component {
     constructor() {
         super();
     }
@@ -36,4 +36,4 @@ class Header extends Component {
     }
 }
 
-export default Header;
+export default MetaHead;

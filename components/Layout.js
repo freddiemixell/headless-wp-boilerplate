@@ -1,4 +1,4 @@
-import Header from "./Header";
+import MetaHead from "./MetaHead";
 import Footer from "./Footer";
 import styled from 'styled-components';
 
@@ -11,7 +11,7 @@ const Container = styled.div`
 
 const Layout = props => (
     <Container>
-        <Header />
+        <MetaHead />
         {props.children}
         <Footer />
     </Container>
