@@ -33,7 +33,7 @@ class Page extends Component {
         };
 
                 return (
-                    <Layout sidebar={true}>
+                    <Layout {...this.props} sidebar={true}>
                         <h1>Page</h1>
                     </Layout>
                 );

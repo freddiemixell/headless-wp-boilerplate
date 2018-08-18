@@ -1,9 +1,8 @@
 import React, { Component } from "react";
-import Link from "next/link";
 import NextHead from 'next/head'
 import Menu from "./Menu.js";
+import MobileMenu from "./MobileMenu";
 import { Config } from "../config.js";
-import MainMenu from "./MainMenu";
 
 class Header extends Component {
     constructor() {
@@ -33,14 +32,8 @@ class Header extends Component {
                     <meta name="description" content={description}/>
                 </NextHead>
                 <header>
-                    <Link prefetch href="/" remove>
-                        <a><img
-                            src="/static/images/logo.png"
-                            width="280"
-                            alt={title}
-                        /></a>
-                    </Link>
-                    <MainMenu/>
+                    <Menu menu={this.props.mainNav}/>
+                    <MobileMenu menu={this.props.mainNav} />
                 </header>
             </div>
         );

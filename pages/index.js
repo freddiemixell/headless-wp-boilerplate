@@ -52,7 +52,7 @@ class Index extends Component {
             );
         });
         return (
-            <Layout>
+            <Layout {...this.props}>
                 <h1>{this.props.page.title.rendered}</h1>
                 <div
                     dangerouslySetInnerHTML={{

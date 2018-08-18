@@ -19,7 +19,7 @@ const mainLayout = {
 
 const Layout = props => (
     <LayoutStyled>
-        <Header />
+        <Header mainNav={props.mainNav} />
         <main style={mainLayout}>
             <section>
                 {props.children}
