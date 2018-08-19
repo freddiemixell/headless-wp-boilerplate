@@ -1,6 +1,7 @@
 {
   "name": "headless-wp-boilerplate",
   "version": "0.2.0",
+  "main": "index.js",
   "scripts": {
     "dev": "node server.js",
     "build": "next build",
