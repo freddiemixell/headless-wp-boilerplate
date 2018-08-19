@@ -1,13 +1,12 @@
 import React, { Component } from "react";
 import Link from "next/link";
 import styled from "styled-components";
-import { bubble as BurgerMenu } from 'react-burger-menu';
+import { stack as BurgerMenu } from 'react-burger-menu';
 import { style } from "./style-util";
 
 const AnchorMan = styled.a`
     color: ${style.color.primary};
     text-decoration: none;
-    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
     font-weight: 700;
     text-align: center;
     text-transform: uppercase;
@@ -55,26 +54,26 @@ class MobileMenu extends Component {
 
 
     return(
-      <MenuWrapper>
-        <Link prefetch href="/" remove>
-            <a><img
-                src="/static/images/logo.png"
-                width="300"
-            /></a>
-        </Link>
-        <BurgerMenu isOpen={false} styles={ style.burgerStyles } right>
-        <Link prefetch href="/" remove>
-            <a><img
-                src="/static/images/logo.png"
-                style={{width: '100%', borderRadius: '2%', paddingBottom: '10%'}}
-            /></a>
-        </Link>
-        {menuItems}
-        <Link prefetch
-            href="/blog" remove>
-            <AnchorMan>Blog</AnchorMan>
-        </Link>
-        </BurgerMenu>
+        <MenuWrapper>
+            <Link prefetch href="/" remove>
+                <a><img
+                    src="/static/images/logo.png"
+                    width="280"
+                /></a>
+            </Link>
+            <BurgerMenu isOpen={false} styles={ style.burgerStyles } right>
+                <Link prefetch href="/" remove>
+                    <a><img
+                        src="/static/images/logo.png"
+                        style={{width: '100%', borderRadius: '2%', paddingBottom: '10%'}}
+                    /></a>
+                </Link>
+                {menuItems}
+                <Link prefetch
+                    href="/blog" remove>
+                    <AnchorMan>Blog</AnchorMan>
+                </Link>
+            </BurgerMenu>
         </MenuWrapper>
     )
   }

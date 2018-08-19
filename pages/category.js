@@ -4,8 +4,6 @@ import Link from "next/link";
 import fetch from "isomorphic-unfetch";
 import Error from "next/error";
 import PageWrapper from "../components/PageWrapper.js";
-import Menu from "../components/Menu.js";
-import MobileMenu from "../components/MobileMenu.js";
 import { Config } from "../config.js";
 
 class Category extends Component {
@@ -45,9 +43,7 @@ class Category extends Component {
             );
         });
         return (
-            <Layout>
-                <Menu menu={this.props.headerMenu} />
-                <MobileMenu menu={this.props.headerMenu} />
+            <Layout {...this.props}>
                 <h1>{this.props.categories[0].name} Posts</h1>
                 {posts}
             </Layout>

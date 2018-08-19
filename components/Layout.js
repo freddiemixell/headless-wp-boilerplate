@@ -1,16 +1,37 @@
 import Header from "./Header";
 import Footer from "./Footer";
+import Sidebar from "./Sidebar";
 import styled from 'styled-components';
 
-const Container = styled.div``;
+const LayoutStyled = styled.div`
+    display: flex;
+    flex-direction: column;
+    background: bisque;
+    margin: 10px;
+    padding: 10px;
+`;
+
+const mainLayout = {
+    display: 'grid',
+    gridTemplateColumns: '70% 30%'
+}
 
 
 const Layout = props => (
-    <Container>
-        <Header />
-        {props.children}
+    <LayoutStyled>
+        <Header mainNav={props.mainNav} />
+        <main style={mainLayout}>
+            <section>
+                {props.children}
+            </section>
+            {props.sidebar && <aside><Sidebar/></aside>}
+        </main>
         <Footer />
-    </Container>
+    </LayoutStyled>
 );
+
+Layout.defaultProps = {
+    sidebar: false
+}
 
 export default Layout;

@@ -2,8 +2,6 @@ import Layout from "../components/Layout";
 import React, { Component } from "react";
 import fetch from "isomorphic-unfetch";
 import PageWrapper from "../components/PageWrapper";
-import Menu from "../components/Menu";
-import MobileMenu from "../components/MobileMenu";
 import { Config } from "../config.js";
 
 
@@ -48,18 +46,14 @@ class Blog extends Component {
 
         if (!this.props.post.title){
                     return (
-                        <Layout>
-                                <Menu menu={this.props.headerMenu} />
-                                <MobileMenu menu={this.props.headerMenu} />
+                        <Layout {...this.props}>
                                 <h1>Posts</h1>
                                 <ul>{posts}</ul>
                         </Layout>
                     )
                 }   else {
                         return (
-                            <Layout>
-                                <Menu menu={this.props.headerMenu} />
-                                <MobileMenu menu={this.props.headerMenu} />
+                            <Layout {...this.props}>
                                 <h1>{this.props.post.title.rendered}</h1>
                                 <div
                                     dangerouslySetInnerHTML={{

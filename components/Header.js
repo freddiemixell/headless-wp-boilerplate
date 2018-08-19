@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import Link from "next/link";
 import NextHead from 'next/head'
 import Menu from "./Menu.js";
+import MobileMenu from "./MobileMenu";
 import { Config } from "../config.js";
 
 class Header extends Component {
@@ -12,7 +12,7 @@ class Header extends Component {
     render() {
 
         const {
-            title = 'Headless WP Starter',
+            title = 'Headless WP Boilerplate',
             description = 'Designed by Freddie Mixell'
         } = this.props
 
@@ -31,6 +31,10 @@ class Header extends Component {
                     </title>
                     <meta name="description" content={description}/>
                 </NextHead>
+                <header>
+                    <Menu menu={this.props.mainNav}/>
+                    <MobileMenu menu={this.props.mainNav} />
+                </header>
             </div>
         );
     }

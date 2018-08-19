@@ -1,1 +1,1 @@
-export const Config = {apiUrl: 'https://digitalreactor.co'}
+export const Config = {apiUrl: 'http://api.digitalreactor.co'}
